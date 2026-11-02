@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoulSom</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/32b94885df.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <i class="fa-solid fa-skull"></i>
+          <span>SoulSom</span>
+        </div>
+
+        <nav class="nav-library">
+          <div class="library-header">
+            <i class="fa-solid fa-book"></i>
+            <span>Sua Biblioteca</span>
+            <button
+              type="button"
+              class="btn-add"
+              aria-label="Criar playlist ou pasta"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </nav>
+
+        <section class="sidebar-cards">
+          <div class="nav-card">
+            <h4>Crie sua primeira playlist</h4>
+            <p>É fácil, vamos te ajudar.</p>
+            <button type="button" class="btn-badge">Criar playlist</button>
+          </div>
+
+          <div class="nav-card">
+            <h4>Que tal seguir um podcast?</h4>
+            <p>Avisaremos você sobre novos episódios.</p>
+            <button type="button" class="btn-badge">Explore podcasts</button>
+          </div>
+        </section>
+
+        <footer class="nav-footer">
+          <nav class="footer-links" aria-label="Links institucionais">
+            <a href="#">Legal</a>
+            <a href="#">Centro de Segurança e Privacidade</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Cookies</a>
+            <a href="#">Sobre anúncios</a>
+            <a href="#">Acessibilidade</a>
+          </nav>
+          <button type="button" class="btn-language">
+            <i class="fa-solid fa-globe"></i>
+            <span>Português do Brasil</span>
+          </button>
+        </footer>
+      </aside>
+
+      <main class="main-content">
+        <header class="search-bar">
+          <label for="search-input" class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="O que você quer ouvir?"
+            autocomplete="off"
+          />
+        </header>
+
+        <section class="content">
+          <div class="section-group">
+            <div class="section-header">
+              <h2>Artistas Populares</h2>
+              <a href="#" class="see-all">Mostrar tudo</a>
+            </div>
+            <div class="artists-grid">
+              <!-- Renderizado via JS -->
+            </div>
+          </div>
+
+          <div class="section-group">
+            <div class="section-header">
+              <h2>Álbuns Populares</h2>
+              <a href="#" class="see-all">Mostrar tudo</a>
+            </div>
+            <div class="albums-grid">
+              <!-- Renderizado via JS -->
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

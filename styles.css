@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  gap: 8px;
+  padding: 8px;
+}
+
+/* ===============================
+   BARRA LATERAL (SIDEBAR)
+================================== */
+.sidebar {
+  width: 320px;
+  background-color: #121212;
+  border-radius: 8px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 8px;
+}
+
+.logo i {
+  font-size: 24px;
+}
+
+.library-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #b3b3b3;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.library-header:hover {
+  color: #fff;
+}
+
+.library-header .btn-add {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Cartões de Playlist e Podcast */
+.sidebar-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-card {
+  background-color: #242424;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-card h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-card p {
+  font-size: 12px;
+  color: #a7a7a7;
+}
+
+.btn-badge {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.btn-badge:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Rodapé da Barra Lateral */
+.nav-footer {
+  margin-top: auto;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.footer-links a {
+  color: #a7a7a7;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.btn-language {
+  background-color: transparent;
+  border: 1px solid #727272;
+  color: #fff;
+  border-radius: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  width: fit-content;
+  transition: border-color 0.2s ease;
+}
+
+.btn-language:hover {
+  border-color: #fff;
+}
+
+/* ===============================
+   CONTEÚDO PRINCIPAL (MAIN)
+================================== */
+.main-content {
+  flex: 1;
+  background-color: #121212;
+  border-radius: 8px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  background-color: #121212;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-bar label {
+  color: #b3b3b3;
+  font-size: 18px;
+}
+
+.search-bar input {
+  background-color: #242424;
+  border: none;
+  border-radius: 500px;
+  padding: 12px 18px;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  max-width: 360px;
+  outline: none;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-bar input:focus {
+  background-color: #2a2a2a;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+/* Grupos e Seções de Conteúdo */
+.content {
+  padding: 0 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.section-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-header .see-all {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.section-header .see-all:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   GRELHAS E CARTÕES PADRONIZADOS
+================================== */
+.artists-grid,
+.albums-grid {
+  display: grid;
+  /* 6 colunas rigorosamente iguais */
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.artist-card,
+.album-card {
+  background-color: #181818;
+  padding: 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  min-width: 0; /* Impede que textos longos forcem tamanhos desiguais nas colunas */
+}
+
+.artist-card:hover,
+.album-card:hover {
+  background-color: #282828;
+}
+
+/* Formatação e Tamanho Padrão das Imagens */
+.artist-card img,
+.album-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Força proporção 1:1 perfeita em todas as telas */
+  object-fit: cover;
+  display: block;
+}
+
+.artist-card img {
+  border-radius: 50%;
+}
+
+.album-card img {
+  border-radius: 6px;
+}
+
+/* Textos padronizados com reticências para não desalinhar a altura */
+.artist-card h3,
+.album-card h3 {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 4px;
+}
+
+.artist-card p,
+.album-card p {
+  font-size: 12px;
+  color: #b3b3b3;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
